@@ -1,0 +1,14 @@
+C:\Users\hp-kyrylchenko\source\repos\Messenger\Messenger.DAL\obj\Debug\Messenger.DAL.csprojAssemblyReference.cache
+C:\Users\hp-kyrylchenko\source\repos\Messenger\Messenger.DAL\obj\Debug\Messenger.DAL.csproj.CoreCompileInputs.cache
+C:\Users\hp-kyrylchenko\source\repos\Messenger\Messenger.DAL\bin\Debug\Messenger.DAL.dll.config
+C:\Users\hp-kyrylchenko\source\repos\Messenger\Messenger.DAL\bin\Debug\Messenger.DAL.dll
+C:\Users\hp-kyrylchenko\source\repos\Messenger\Messenger.DAL\bin\Debug\Messenger.DAL.pdb
+C:\Users\hp-kyrylchenko\source\repos\Messenger\Messenger.DAL\bin\Debug\EntityFramework.dll
+C:\Users\hp-kyrylchenko\source\repos\Messenger\Messenger.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\hp-kyrylchenko\source\repos\Messenger\Messenger.DAL\bin\Debug\EntityFramework.xml
+C:\Users\hp-kyrylchenko\source\repos\Messenger\Messenger.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\hp-kyrylchenko\source\repos\Messenger\Messenger.DAL\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\hp-kyrylchenko\source\repos\Messenger\Messenger.DAL\obj\Debug\Messenger.DAL.csproj.CopyComplete
+C:\Users\hp-kyrylchenko\source\repos\Messenger\Messenger.DAL\obj\Debug\Messenger.DAL.dll
+C:\Users\hp-kyrylchenko\source\repos\Messenger\Messenger.DAL\obj\Debug\Messenger.DAL.pdb
+C:\Users\hp-kyrylchenko\source\repos\Messenger\Messenger.DAL\bin\Debug\ru\EntityFramework.SqlServer.resources.dll

@@ -1,0 +1,17 @@
+C:\Users\hp-kyrylchenko\source\repos\Messenger\Messenger.BLL\obj\Debug\Messenger.BLL.csprojAssemblyReference.cache
+C:\Users\hp-kyrylchenko\source\repos\Messenger\Messenger.BLL\obj\Debug\Messenger.BLL.csproj.CoreCompileInputs.cache
+C:\Users\hp-kyrylchenko\source\repos\Messenger\Messenger.BLL\bin\Debug\Messenger.BLL.dll.config
+C:\Users\hp-kyrylchenko\source\repos\Messenger\Messenger.BLL\bin\Debug\Messenger.BLL.dll
+C:\Users\hp-kyrylchenko\source\repos\Messenger\Messenger.BLL\bin\Debug\Messenger.BLL.pdb
+C:\Users\hp-kyrylchenko\source\repos\Messenger\Messenger.BLL\bin\Debug\AutoMapper.dll
+C:\Users\hp-kyrylchenko\source\repos\Messenger\Messenger.BLL\bin\Debug\EntityFramework.dll
+C:\Users\hp-kyrylchenko\source\repos\Messenger\Messenger.BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\hp-kyrylchenko\source\repos\Messenger\Messenger.BLL\bin\Debug\Messenger.DAL.dll
+C:\Users\hp-kyrylchenko\source\repos\Messenger\Messenger.BLL\bin\Debug\Messenger.DAL.pdb
+C:\Users\hp-kyrylchenko\source\repos\Messenger\Messenger.BLL\bin\Debug\Messenger.DAL.dll.config
+C:\Users\hp-kyrylchenko\source\repos\Messenger\Messenger.BLL\bin\Debug\AutoMapper.xml
+C:\Users\hp-kyrylchenko\source\repos\Messenger\Messenger.BLL\bin\Debug\EntityFramework.xml
+C:\Users\hp-kyrylchenko\source\repos\Messenger\Messenger.BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\hp-kyrylchenko\source\repos\Messenger\Messenger.BLL\obj\Debug\Messenger.BLL.csproj.CopyComplete
+C:\Users\hp-kyrylchenko\source\repos\Messenger\Messenger.BLL\obj\Debug\Messenger.BLL.dll
+C:\Users\hp-kyrylchenko\source\repos\Messenger\Messenger.BLL\obj\Debug\Messenger.BLL.pdb

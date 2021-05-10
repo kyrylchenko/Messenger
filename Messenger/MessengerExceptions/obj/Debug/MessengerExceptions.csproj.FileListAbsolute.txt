@@ -1,0 +1,6 @@
+C:\Users\hp-kyrylchenko\source\repos\Messenger\MessengerExceptions\bin\Debug\MessengerExceptions.dll
+C:\Users\hp-kyrylchenko\source\repos\Messenger\MessengerExceptions\bin\Debug\MessengerExceptions.pdb
+C:\Users\hp-kyrylchenko\source\repos\Messenger\MessengerExceptions\obj\Debug\MessengerExceptions.csprojAssemblyReference.cache
+C:\Users\hp-kyrylchenko\source\repos\Messenger\MessengerExceptions\obj\Debug\MessengerExceptions.csproj.CoreCompileInputs.cache
+C:\Users\hp-kyrylchenko\source\repos\Messenger\MessengerExceptions\obj\Debug\MessengerExceptions.dll
+C:\Users\hp-kyrylchenko\source\repos\Messenger\MessengerExceptions\obj\Debug\MessengerExceptions.pdb

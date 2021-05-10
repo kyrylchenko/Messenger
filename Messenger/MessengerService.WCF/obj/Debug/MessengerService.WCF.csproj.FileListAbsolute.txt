@@ -1,0 +1,7 @@
+C:\Users\hp-kyrylchenko\source\repos\Messenger\MessengerService.WCF\bin\Debug\MessengerService.WCF.dll.config
+C:\Users\hp-kyrylchenko\source\repos\Messenger\MessengerService.WCF\bin\Debug\MessengerService.WCF.dll
+C:\Users\hp-kyrylchenko\source\repos\Messenger\MessengerService.WCF\bin\Debug\MessengerService.WCF.pdb
+C:\Users\hp-kyrylchenko\source\repos\Messenger\MessengerService.WCF\obj\Debug\MessengerService.WCF.csproj.CoreCompileInputs.cache
+C:\Users\hp-kyrylchenko\source\repos\Messenger\MessengerService.WCF\obj\Debug\MessengerService.WCF.dll
+C:\Users\hp-kyrylchenko\source\repos\Messenger\MessengerService.WCF\obj\Debug\MessengerService.WCF.pdb
+C:\Users\hp-kyrylchenko\source\repos\Messenger\MessengerService.WCF\obj\Debug\MessengerService.WCF.csprojAssemblyReference.cache

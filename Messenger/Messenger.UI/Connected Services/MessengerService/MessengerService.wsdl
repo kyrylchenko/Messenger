@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MessengerService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IMessengerService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8733/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8733/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8733/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Messenger.BLL.DTO" />
+      <xsd:import schemaLocation="http://localhost:8733/?xsd=xsd3" namespace="http://schemas.microsoft.com/Message" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMessengerService_Connect_InputMessage">
+    <wsdl:part name="parameters" element="tns:Connect" />
+  </wsdl:message>
+  <wsdl:message name="IMessengerService_Connect_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConnectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessengerService_SendMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMessage" />
+  </wsdl:message>
+  <wsdl:message name="UploadFileRequest">
+    <wsdl:part name="parameters" element="tns:UploadFileRequest" />
+  </wsdl:message>
+  <wsdl:message name="UploadFileRequest_Headers">
+    <wsdl:part name="filePath" element="tns:filePath" />
+  </wsdl:message>
+  <wsdl:message name="UploadFileInfo">
+    <wsdl:part name="parameters" element="tns:UploadFileInfo" />
+  </wsdl:message>
+  <wsdl:message name="DownloadFileRequest">
+    <wsdl:part name="parameters" element="tns:DownloadFileRequest" />
+  </wsdl:message>
+  <wsdl:message name="DownloadFileInfo">
+    <wsdl:part name="parameters" element="tns:DownloadFileInfo" />
+  </wsdl:message>
+  <wsdl:message name="DownloadFileInfo_Headers">
+    <wsdl:part name="fileId" element="tns:fileId" />
+    <wsdl:part name="fileName" element="tns:fileName" />
+  </wsdl:message>
+  <wsdl:message name="IMessengerService_Disconnect_InputMessage">
+    <wsdl:part name="parameters" element="tns:Disconnect" />
+  </wsdl:message>
+  <wsdl:message name="IMessengerService_Disconnect_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisconnectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessengerService_GetChats_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChats" />
+  </wsdl:message>
+  <wsdl:message name="IMessengerService_GetChats_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChatsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessengerService_GetMessages_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessages" />
+  </wsdl:message>
+  <wsdl:message name="IMessengerService_GetMessages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMessagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessengerService_GetChatUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChatUsers" />
+  </wsdl:message>
+  <wsdl:message name="IMessengerService_GetChatUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChatUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessengerService_UpdateMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMessage" />
+  </wsdl:message>
+  <wsdl:message name="IMessengerService_UpdateMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessengerService_GetUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUser" />
+  </wsdl:message>
+  <wsdl:message name="IMessengerService_GetUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessengerService_Registration_InputMessage">
+    <wsdl:part name="parameters" element="tns:Registration" />
+  </wsdl:message>
+  <wsdl:message name="IMessengerService_Registration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessengerService_AddContact_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddContact" />
+  </wsdl:message>
+  <wsdl:message name="IMessengerService_AddContact_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessengerService_CreateChat_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateChat" />
+  </wsdl:message>
+  <wsdl:message name="IMessengerService_CreateChat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateChatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessengerService_CallBackMsg_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:CallBackMsg" />
+  </wsdl:message>
+  <wsdl:message name="IMessengerService_CallBackChatAdded_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:CallBackChatAdded" />
+  </wsdl:message>
+  <wsdl:portType name="IMessengerService">
+    <wsdl:operation name="Connect">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMessengerService/Connect" message="tns:IMessengerService_Connect_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMessengerService/ConnectResponse" message="tns:IMessengerService_Connect_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMessage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMessengerService/SendMessage" message="tns:IMessengerService_SendMessage_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMessengerService/UploadFile" name="UploadFileRequest" message="tns:UploadFileRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMessengerService/UploadFileResponse" name="UploadFileInfo" message="tns:UploadFileInfo" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMessengerService/DownloadFile" name="DownloadFileRequest" message="tns:DownloadFileRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMessengerService/DownloadFileResponse" name="DownloadFileInfo" message="tns:DownloadFileInfo" />
+    </wsdl:operation>
+    <wsdl:operation name="Disconnect">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMessengerService/Disconnect" message="tns:IMessengerService_Disconnect_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMessengerService/DisconnectResponse" message="tns:IMessengerService_Disconnect_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChats">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMessengerService/GetChats" message="tns:IMessengerService_GetChats_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMessengerService/GetChatsResponse" message="tns:IMessengerService_GetChats_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMessages">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMessengerService/GetMessages" message="tns:IMessengerService_GetMessages_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMessengerService/GetMessagesResponse" message="tns:IMessengerService_GetMessages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChatUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMessengerService/GetChatUsers" message="tns:IMessengerService_GetChatUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMessengerService/GetChatUsersResponse" message="tns:IMessengerService_GetChatUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMessage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMessengerService/UpdateMessage" message="tns:IMessengerService_UpdateMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMessengerService/UpdateMessageResponse" message="tns:IMessengerService_UpdateMessage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMessengerService/GetUser" message="tns:IMessengerService_GetUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMessengerService/GetUserResponse" message="tns:IMessengerService_GetUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Registration">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMessengerService/Registration" message="tns:IMessengerService_Registration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMessengerService/RegistrationResponse" message="tns:IMessengerService_Registration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddContact">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMessengerService/AddContact" message="tns:IMessengerService_AddContact_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMessengerService/AddContactResponse" message="tns:IMessengerService_AddContact_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateChat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMessengerService/CreateChat" message="tns:IMessengerService_CreateChat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMessengerService/CreateChatResponse" message="tns:IMessengerService_CreateChat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CallBackMsg">
+      <wsdl:output wsaw:Action="http://tempuri.org/IMessengerService/CallBackMsg" message="tns:IMessengerService_CallBackMsg_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CallBackChatAdded">
+      <wsdl:output wsaw:Action="http://tempuri.org/IMessengerService/CallBackChatAdded" message="tns:IMessengerService_CallBackChatAdded_OutputCallbackMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IMessengerService" type="tns:IMessengerService">
+    <wsp:PolicyReference URI="#NetTcpBinding_IMessengerService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="Connect">
+      <soap12:operation soapAction="http://tempuri.org/IMessengerService/Connect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMessage">
+      <soap12:operation soapAction="http://tempuri.org/IMessengerService/SendMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <soap12:operation soapAction="http://tempuri.org/IMessengerService/UploadFile" style="document" />
+      <wsdl:input name="UploadFileRequest">
+        <soap12:header message="tns:UploadFileRequest_Headers" part="filePath" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="UploadFileInfo">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFile">
+      <soap12:operation soapAction="http://tempuri.org/IMessengerService/DownloadFile" style="document" />
+      <wsdl:input name="DownloadFileRequest">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DownloadFileInfo">
+        <soap12:header message="tns:DownloadFileInfo_Headers" part="fileId" use="literal" />
+        <soap12:header message="tns:DownloadFileInfo_Headers" part="fileName" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Disconnect">
+      <soap12:operation soapAction="http://tempuri.org/IMessengerService/Disconnect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChats">
+      <soap12:operation soapAction="http://tempuri.org/IMessengerService/GetChats" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessages">
+      <soap12:operation soapAction="http://tempuri.org/IMessengerService/GetMessages" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChatUsers">
+      <soap12:operation soapAction="http://tempuri.org/IMessengerService/GetChatUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMessage">
+      <soap12:operation soapAction="http://tempuri.org/IMessengerService/UpdateMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <soap12:operation soapAction="http://tempuri.org/IMessengerService/GetUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Registration">
+      <soap12:operation soapAction="http://tempuri.org/IMessengerService/Registration" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddContact">
+      <soap12:operation soapAction="http://tempuri.org/IMessengerService/AddContact" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateChat">
+      <soap12:operation soapAction="http://tempuri.org/IMessengerService/CreateChat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CallBackMsg">
+      <soap12:operation soapAction="http://tempuri.org/IMessengerService/CallBackMsg" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CallBackChatAdded">
+      <soap12:operation soapAction="http://tempuri.org/IMessengerService/CallBackChatAdded" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MessengerService">
+    <wsdl:port name="NetTcpBinding_IMessengerService" binding="tns:NetTcpBinding_IMessengerService">
+      <soap12:address location="net.tcp://localhost:8734/" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://localhost:8734/</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>DESKTOP-PCSQO6M\hp-kyrylchenko</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
