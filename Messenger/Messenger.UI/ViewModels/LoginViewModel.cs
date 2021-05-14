@@ -70,7 +70,9 @@ namespace Messenger.UI.ViewModels
            {
                try
                {
-                   RegistrationView registrationView = new RegistrationView() { WindowStartupLocation = WindowStartupLocation.CenterOwner, Owner = App.Current.MainWindow };;
+                   Window currentWindow = param as Window;
+                   
+                   RegistrationView registrationView = new RegistrationView() { WindowStartupLocation = WindowStartupLocation.CenterOwner, Owner =currentWindow };;
                    registrationView.ShowDialog();
                }
                catch (Exception excep)

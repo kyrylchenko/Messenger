@@ -23,7 +23,7 @@
         >
 
 
-    <Grid  Background="White">
+    <Grid  >
       
         <Grid.RowDefinitions>
             <RowDefinition Height="100">

@@ -4,16 +4,16 @@
 exe
 C#
 .cs
-C:\Users\hp-kyrylchenko\source\repos\Messenger\Messenger.UI\obj\Debug\
+C:\Users\hp-kyrylchenko\Desktop\Messenger\Messenger\Messenger.UI\obj\Debug\
 Messenger.UI
 none
 false
 DEBUG;TRACE
-C:\Users\hp-kyrylchenko\source\repos\Messenger\Messenger.UI\App.xaml
+C:\Users\hp-kyrylchenko\Desktop\Messenger\Messenger\Messenger.UI\App.xaml
 6949239222
 
-261264807645
-271478377817
+25-292501207
+27-582733612
 Views\AddContactView.xaml;Views\CreateGroupView.xaml;Views\LoginView.xaml;Views\MainView.xaml;Views\MessageBoxView.xaml;Views\CreateOrEditUserView.xaml;
 
 False

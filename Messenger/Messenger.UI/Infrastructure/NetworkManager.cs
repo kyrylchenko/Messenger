@@ -7,9 +7,25 @@ using System.Threading.Tasks;
 
 namespace Messenger.UI.Infrastructure
 {
+
  static   class NetworkManager
     {
-        public static MessengerService.MessengerServiceClient Client { get; set; }
+
+        private static readonly object lockObj = new object ();
+        private static MessengerService.MessengerServiceClient client;
+        public static MessengerService.MessengerServiceClient Client
+        {
+            get
+            {
+                lock(lockObj)
+                    return client;
+            }
+            set
+            {
+                lock(lockObj)
+                    client = value;
+            }
+        }
         public static UserDTO CurrentUser { set; get; }
     }
 }

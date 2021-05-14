@@ -90,7 +90,6 @@
     </Compile>
     <Compile Include="Converters\ConvertTextToFirstLatterOfText.cs" />
     <Compile Include="Infrastructure\BaseNotifyPropertyChanged.cs" />
-    <Compile Include="Infrastructure\MVXObservableCollection.cs" />
     <Compile Include="Infrastructure\NetworkManager.cs" />
     <Compile Include="Infrastructure\RelayCommand.cs" />
     <Compile Include="Infrastructure\ViewModelLocator.cs" />

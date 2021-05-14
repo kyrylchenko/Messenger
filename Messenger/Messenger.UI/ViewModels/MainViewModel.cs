@@ -57,15 +57,7 @@ namespace Messenger.UI.ViewModels
 
         public MainViewModel()
         {
-
-
-            // Console.WriteLine("new");
-            NetworkManager.Client = new MessengerService.MessengerServiceClient(new System.ServiceModel.InstanceContext(this));
-            //Console.WriteLine("Enter login");
-            //string log = Console.ReadLine();
-            //Console.WriteLine("Enter pw");
-            //string pw = Console.ReadLine();
-            //CurrentUser.User = Client.Connect(log, pw);
+            NetworkManager.Client = new MessengerService.MessengerServiceClient(new System.ServiceModel.InstanceContext(this));      
             Application.Current.MainWindow.Effect = new BlurEffect();
             
             if (new LoginView().ShowDialog() != true)

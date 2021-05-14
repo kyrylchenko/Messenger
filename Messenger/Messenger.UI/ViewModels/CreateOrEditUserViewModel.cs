@@ -50,7 +50,7 @@ namespace Messenger.UI.ViewModels
         }
         public CreateOrEditUserViewModel()
         {
-           
+            User = new UserDTO();
            InitializeCommands();
         }
         void InitializeCommands()
@@ -64,7 +64,7 @@ namespace Messenger.UI.ViewModels
             CreateOrEditUserCommand = new RelayCommand(param =>
             {
                 NetworkManager.Client.Registration(User);
-
+               
                 Window currentWindow = param as Window;
                 currentWindow.DialogResult = true;
                 currentWindow.Close();

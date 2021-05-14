@@ -27,8 +27,8 @@
   Background="{DynamicResource PrimaryHueDarkBrush}"
   Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}"
  
-  Padding="10"
-  UniformCornerRadius="20" Margin="38,0,39,-152">
+  
+  UniformCornerRadius="20" Margin="10,0,10,-143" Padding="20" >
             <StackPanel Orientation="Vertical" >
                 <TextBlock VerticalAlignment="Top" x:Name="MessageTextBox"  FontSize="15" TextWrapping="Wrap"></TextBlock>
                 <Button
@@ -38,7 +38,7 @@
                       Style="{StaticResource MaterialDesignRaisedLightButton}"
                     
                       materialDesign:ButtonAssist.CornerRadius="8"
-                      ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Content="OK"/>
+                     Content="OK"/>
             </StackPanel>
         </materialDesign:Card>
        
